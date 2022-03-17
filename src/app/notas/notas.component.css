@@ -1,0 +1,34 @@
+form{
+    width: 800px;
+    margin: 30px auto;
+    border: solid 1px #ccc;
+    background-color: #e8e8e8;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+input[type="number"],
+input[type="text"]{
+    border-radius: 5px;
+    border: solid 1px #ccc;
+    padding: 5px;
+    margin-right: 10px;
+    width: 194px;
+}
+
+input[type="button"]{
+    background-color: rgb(14, 221, 14);
+    border-radius: 5px;
+    border: solid 1px rgb(15, 104, 3);
+    color: #fff;
+    width: 150px;
+}
+
+table{
+    width: 800px;
+    margin: 30px auto;
+    border: solid 1px #ccc;
+    background-color: #e8e8e8;
+    border-radius: 5px;
+    padding: 5px;
+}
