@@ -9,7 +9,7 @@
       <input type="button" value="Cadastrar" (click)="cadastrar()" *ngIf="id<0">
       <input type="button" value="Editar" (click)="atualizar()" *ngIf="id>=0">   
   </form>
-  
+
   <!-- Tabela -->
   
   <table>
@@ -26,11 +26,11 @@
           <td>{{notas.fnotaAluno}}</td>
           <td>{{notas.snotaAluno}}</td>
           <td><button (click)="editar(id)" class="p-1 btn btn-primary">Editar</button></td>
-          <td><button (click)="excluir(id)"class="p-1 btn btn-warning">Excluir</button></td>
+          <td><button (click)="excluir(id)"class="p-1 btn btn-danger">Excluir</button></td>
+          <td><button (click)="status(id)" class="p-1 btn btn-warning">Status</button></td>
       </tr>
   </table>
 
-  <button type="button" class="btn btn-primary mt-3" >Estado do aluno</button>
 
 
 </div>

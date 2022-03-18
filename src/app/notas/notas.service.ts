@@ -12,7 +12,7 @@ export class NotasService {
 
   private vetorNotas: Notas[] = [
     new Notas("Fernando", 8, 7),
-    new Notas("Lucas", 7, 7),
+    new Notas("Lucas", 5, 2),
     new Notas("Antonio", 10, 5),
   ];
 

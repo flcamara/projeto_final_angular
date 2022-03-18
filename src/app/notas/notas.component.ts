@@ -13,6 +13,7 @@ export class NotasComponent implements OnInit {
   public vetorNotas: any | Notas[];
   public notas: any | Notas;
   public id: any | number;
+  public media: any | Notas[]
 
   constructor(private servico:NotasService) { }
 
@@ -46,5 +47,15 @@ export class NotasComponent implements OnInit {
     this.servico.alterar(this.id, this.notas);
     this.notas = new Notas("",0,0)
     this.id = -1
+  }
+
+  status(id: number){
+    this.id = id;   
+     
+    if(this.vetorNotas[id].fnotaAluno + this.vetorNotas[id].snotaAluno < 14){
+      alert('Reprovado')
+    }else{
+      alert('Aprovado')
+    }
   }
 }
