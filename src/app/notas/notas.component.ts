@@ -9,11 +9,14 @@ import { NotasService } from './notas.service';
 })
 export class NotasComponent implements OnInit {
 
+  exibirStatus: boolean = false
+
   //Atributos
   public vetorNotas: any | Notas[];
   public notas: any | Notas;
   public id: any | number;
   public media: any | Notas[]
+  public mensagem = ""
 
   constructor(private servico:NotasService) { }
 
@@ -49,13 +52,18 @@ export class NotasComponent implements OnInit {
     this.id = -1
   }
 
-  status(id: number){
-    this.id = id;   
-     
+  status(id: number, mensagem: string){
+    
+    this.mensagem = mensagem
     if(this.vetorNotas[id].fnotaAluno + this.vetorNotas[id].snotaAluno < 14){
-      alert('Reprovado')
+      this.mensagem = `Olá ${this.vetorNotas[id].nomeAluno}, seu resultado é: Reprovado`
     }else{
-      alert('Aprovado')
+      this.mensagem = `Olá ${this.vetorNotas[id].nomeAluno}, seu resultado é: Aprovado`
     }
+  }
+
+  clickStatus(){
+    this.exibirStatus = !this.exibirStatus
+    this.exibirStatus = true
   }
 }

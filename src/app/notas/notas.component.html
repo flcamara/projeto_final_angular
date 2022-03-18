@@ -27,10 +27,14 @@
           <td>{{notas.snotaAluno}}</td>
           <td><button (click)="editar(id)" class="p-1 btn btn-primary">Editar</button></td>
           <td><button (click)="excluir(id)"class="p-1 btn btn-danger">Excluir</button></td>
-          <td><button (click)="status(id)" class="p-1 btn btn-warning">Status</button></td>
+          <td><button (click)="status(id, mensagem); clickStatus()" class="p-1 btn btn-warning">Status</button></td>
       </tr>
   </table>
 
-
+  <div *ngIf="this.exibirStatus">
+    <div class="alert alert-primary mt-3" role="alert">
+        {{mensagem}}
+    </div>
+</div>
 
 </div>
